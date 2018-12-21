@@ -48,8 +48,10 @@ def rm_dir_recursive(directory, skip=SKIP_FILES, verbose=None):
 """ Entry point
 """
 if __name__ == "__main__":
-	parser = argparse.ArgumentParser(description="""Clean a game server containers server_files. !!! WARNING: "Cleaning" a game server container will DELETE ALL SERVER FILES, including configurations and saves. !!!
-		If you want to be sure not to delete something by accident, use the --interactive flag.""")
+	parser = argparse.ArgumentParser(description="""Clean a game server containers server_files. 
+		!!! WARNING: "Cleaning" a game server container will DELETE ALL SERVER FILES, including 
+		configurations and saves. !!! If you want to be sure not to delete something by accident, 
+		use the --interactive flag.""")
 	
 	parser.add_argument("--interactive", "-i", action="store_const", const="interactive", 
 		help="Ask before cleaning the directories.")
